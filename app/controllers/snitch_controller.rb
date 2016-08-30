@@ -1,0 +1,2 @@
+class SnitchController < ApplicationController
+end
