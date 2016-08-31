@@ -6,7 +6,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     @username = request.env["omniauth.auth"]["info"]["nickname"]
     @client = Octokit::Client.new
     @client.access_token = token
-    repo_collect
+    code_search
     if @user.persisted?
       sign_in_and_redirect @user, :event => :authentication
       set_flash_message(:notice, :success, :kind => "Github") if is_navigational_format?
@@ -16,17 +16,26 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  def repo_collect
-    @data = Array.new
-    @client.repositories.each do |repo|
-      @data << repo.name
-    end
-    code_search
-  end
+  # def repo_collect
+  #   @data = Array.new
+  #   @client.repositories.each do |repo|
+  #     @data << repo.name
+  #   end
+  #   code_search
+  # end
 
   def code_search
-    results = @client.search_code("facebook user:#{@username}")
-    p "=====================#{results[:items].inspect}================="
+    @results = @client.search_code("facebook user:#{@username}")
+    html_get
+  end
+
+  def html_get
+    @html = Array.new
+    @results[:items].each do |result|
+      @html << result.html_url
+    end
+    session[:html] = @html
+    # p "=====================#{@html}================="
   end
 
   def failure

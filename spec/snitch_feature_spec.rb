@@ -6,7 +6,7 @@ feature 'Snitch' do
     scenario 'should display a GitHub login link' do
       visit '/'
       expect(page).to have_content 'GitSnitch'
-      expect(page).to have_link 'Log in with Github'
+      expect(page).to have_button 'Log in with Github'
     end
   end
 

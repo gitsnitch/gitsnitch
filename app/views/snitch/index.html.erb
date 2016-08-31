@@ -6,7 +6,11 @@
   </head>
   <body>
     <h1>GitSnitch</h1>
-    <%= link_to "Log in with Github", user_github_omniauth_authorize_path %>
-
+    <%= button_to "Log in with Github".html_safe, user_github_omniauth_authorize_path, :id => "button" %>
+    <% if @user %>
+      <% @user.each do |link|%>
+        <li><%= link %></li>
+      <% end %>
+    <% end %>
   </body>
 </html>
