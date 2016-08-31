@@ -25,7 +25,12 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def code_search
-    results = @client.search_code("facebook user:#{@username}")
+    results = @client.search_code("facebook user:#{@username}", fork:true)
+    # results = @client.search_code("facebook user:makersacademy")
+
+    p "=====================#{results.inspect}================="
+
+    # p "=====================#{results[:items].pop.name}================="
   end
 
   def failure
