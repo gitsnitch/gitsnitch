@@ -17,20 +17,16 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def repo_collect
-    data = Array.new
+    @data = Array.new
     @client.repositories.each do |repo|
-      data << repo.name
+      @data << repo.name
     end
     code_search
   end
 
   def code_search
-    results = @client.search_code("facebook user:#{@username}", fork:true)
-    # results = @client.search_code("facebook user:makersacademy")
-
-    p "=====================#{results.inspect}================="
-
-    # p "=====================#{results[:items].pop.name}================="
+    results = @client.search_code("facebook user:#{@username}")
+    # p "=====================#{results[:items].inspect}================="
   end
 
   def failure

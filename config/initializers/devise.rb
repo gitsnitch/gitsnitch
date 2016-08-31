@@ -27,6 +27,7 @@ Devise.setup do |config|
   require 'devise/orm/active_record'
   config.omniauth :github, Rails.application.secrets.github_client_id, Rails.application.secrets.github_client_secret
 
+
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for
