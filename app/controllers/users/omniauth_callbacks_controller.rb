@@ -26,7 +26,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def code_search
     results = @client.search_code("facebook user:#{@username}")
-    # p "=====================#{results[:items].inspect}================="
+    p "=====================#{results[:items].inspect}================="
   end
 
   def failure
