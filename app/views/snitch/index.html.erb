@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>GitSnitch</title>
-  </head>
-  <body>
-    <h1>GitSnitch</h1>
-    <%= link_to "Log in with Github", user_github_omniauth_authorize_path %>
+    <head>
 
-  </body>
+        <meta charset="utf-8">
+        <title>GitSnitch</title>
+    </head>
+        <body>
+            <div>
+                <header>
+                    <p>
+                        <h1>GitSnitch.</h1>
+                        <%= image_tag("gsimage.jpg", :size => "250x250") %>
+                    </p>
+                </header>
+            </div>
+            <p>
+            <div>
+                <link>
+                    <%= link_to "Log in with Github", user_github_omniauth_authorize_path %>
+                </link>
+            </div>
+        </p>
+            <div>
+                <p>
+                <dis>Technologies used:</dis>
+            </p>
+            <p>
+                <%= image_tag("ror", :size => "40x40") %>
+                <%= image_tag("Rspec.png", :size => "40x40") %>
+                <%= image_tag("Octokit.png", :size => "40x40") %>
+                <%= image_tag("omniauth.png", :size => "130x40") %>
+                <%= image_tag("github.png", :size => "40x40") %>
+                <%= image_tag("Oauth_logo.svg.png", :size => "40x40") %>
+                <%= image_tag("oauth2.png", :size => "40x40") %>
+            </p>
+
+            </div>
+            <footer>
+                <dis>
+                Disclaimer:
+                This Site is thought to be used as a helpful tool to search for serious errors caused by any individual by revealing sensitive information such as; Secret_ID, App_ID and/or Contact Information.
+                Through the use of OmniAuth, Oauth and Octokit, we have been able to reproduce the same level of security as that provided by Github when searching through publicly available repositories.
+                All information found using the GitSnitch tool is open to the public, therefore if any sensitive or vulnerable information is found, it is advisable to seek advice from Github or to view steps towards deleting/removing this information from the repository (<a class="white" href="https://help.github.com/articles/remove-sensitive-data/">Remove Sensitive Information</a>)
+                </dis>
+            </footer>
+        </body>
 </html>

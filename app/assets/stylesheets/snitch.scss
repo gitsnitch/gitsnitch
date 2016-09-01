@@ -1,3 +1,38 @@
 // Place all the styles related to the snitch controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  margin: auto;
+
+  // background-image: url(/assets/rubycode.png);
+}
+
+h1 {
+margin: auto;
+
+}
+
+header {
+  font-size: 300%;
+}
+
+link {
+  font-size: 120%;
+}
+
+dis {
+    font-size: 50%;
+    width: 200px;
+}
+
+footer {
+  color: white;
+  background-color: grey;
+
+}
+
+.white {
+  color: white;
+}
