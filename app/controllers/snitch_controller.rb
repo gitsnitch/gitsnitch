@@ -4,5 +4,9 @@ class SnitchController < ApplicationController
     @user = session[:html]
   end
 
-  
+  def destroy
+    @user.destroy
+  end
+
+
 end
