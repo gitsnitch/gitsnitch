@@ -115,6 +115,34 @@
         null,
         5
       ],
+      "/Users/thadycondon/Documents/Projects/gitsnitch/lib/octokit.rb": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
       "/Users/thadycondon/Documents/Projects/gitsnitch/config/environments/test.rb": [
         1,
         null,
@@ -606,6 +634,8 @@
         1,
         1,
         null,
+        null,
+        null,
         null
       ],
       "/Users/thadycondon/Documents/Projects/gitsnitch/app/controllers/application_controller.rb": [
@@ -680,6 +710,6 @@
         null
       ]
     },
-    "timestamp": 1472662815
+    "timestamp": 1472720809
   }
 }
