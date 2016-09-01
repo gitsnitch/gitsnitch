@@ -6,21 +6,27 @@
         <title>GitSnitch</title>
     </head>
         <body>
+            <div class="main">
             <div>
                 <header>
                     <p>
                         <h1>GitSnitch.</h1>
+                        <h1>
                         <%= image_tag("gsimage.jpg", :size => "250x250") %>
+                    </h1>
                     </p>
                 </header>
             </div>
             <p>
             <div>
                 <link>
-                    <%= link_to "Log in with Github", user_github_omniauth_authorize_path %>
+                      <%= button_to "Authorize Github Search".html_safe, user_github_omniauth_authorize_path, :id => "button" %>
                 </link>
             </div>
         </p>
+        <%= notice %>
+    </div>
+        <footer>
             <div>
                 <p>
                 <dis>Technologies used:</dis>
@@ -36,7 +42,7 @@
             </p>
 
             </div>
-            <footer>
+
                 <dis>
                 Disclaimer:
                 This Site is thought to be used as a helpful tool to search for serious errors caused by any individual by revealing sensitive information such as; Secret_ID, App_ID and/or Contact Information.
@@ -45,4 +51,20 @@
                 </dis>
             </footer>
         </body>
+<!-- =======
+  <head>
+    <meta charset="utf-8">
+    <title>GitSnitch</title>
+  </head>
+  <body>
+    <h1>GitSnitch</h1>
+    <%= button_to "Log in with Github".html_safe, user_github_omniauth_authorize_path, :id => "button" %>
+    <%= button_to "Log out".html_safe, destroy_user_session_path, method: :delete, :id => "button" %>
+    <% if @user %>
+      <% @user.each do |link|%>
+        <li><a href="<%=link%>" target="_blank"</a><%= link %></li>
+      <% end %>
+    <% end %>
+  </body>
+>>>>>>> b425560e8bc7d7e024d72369955a19f7857a2417 -->
 </html>
