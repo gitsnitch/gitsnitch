@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html>
     <head>
-
-        <meta charset="utf-8">
-        <title>GitSnitch</title>
-    </head>
+      <head>
+          <meta charset="utf-8">
+          <title>GitSnitch</title>
+        </head>
         <body>
-            <div class="main">
-            <div>
-                <header>
-                    <p>
-                        <h1>GitSnitch.</h1>
-                        <h1>
-                        <%= image_tag("gsimage.jpg", :size => "250x250") %>
-                    </h1>
-                    </p>
-                </header>
+          <div class="main">
+            <div class="top">
+              <div id="title">
+                <h1>
+                  <%= image_tag("gitsnitch.png", height: '100') %>GitSnitch.
+                </h1>
+              </div>
+              <p id="description"> Search your Github repositries for personal information that could be putting you at risk
             </div>
-            <p>
-            <div>
-                <link>
-                      <%= button_to "Authorize Github Search".html_safe, user_github_omniauth_authorize_path, :id => "button" %>
-                      <%= button_to "Log out".html_safe, destroy_user_session_path, method: :delete, :id => "button" %>
-                </link>
+            <div class="middle">
+        
+                <%= button_to "Authorize Search", user_github_omniauth_authorize_path, :id => "button" %>
+                <%= button_to "Log out".html_safe, destroy_user_session_path, method: :delete, :id => "button" %>
+
+                <p id="comment">* with Github</p>
+                <p id="comment"><%= notice %></p>
+            </div>
+
+            <div class="bottom">
+
                 <% if @user %>
                   <% @user.each do |link|%>
-                    <li><a href="<%=link%>" target="_blank"</a><%= link %></li>
+                    <li><a href="<%=link%>" target="_blank"><%= link %></a></li>
                   <% end %>
                 <% end %>
-            </div>
-        </p>
-        <%= notice %>
-    </div>
-        <footer>
-            <div>
-                <p>
-                <dis>Technologies used:</dis>
-            </p>
-            <p>
-                <%= image_tag("ror", :size => "40x40") %>
-                <%= image_tag("Rspec.png", :size => "40x40") %>
-                <%= image_tag("Octokit.png", :size => "40x40") %>
-                <%= image_tag("omniauth.png", :size => "130x40") %>
-                <%= image_tag("github.png", :size => "40x40") %>
-                <%= image_tag("Oauth_logo.svg.png", :size => "40x40") %>
-                <%= image_tag("oauth2.png", :size => "40x40") %>
-            </p>
 
-            </div>
 
-                <dis>
-                Disclaimer:
-                This Site is thought to be used as a helpful tool to search for serious errors caused by any individual by revealing sensitive information such as; Secret_ID, App_ID and/or Contact Information.
-                Through the use of OmniAuth, Oauth and Octokit, we have been able to reproduce the same level of security as that provided by Github when searching through publicly available repositories.
-                All information found using the GitSnitch tool is open to the public, therefore if any sensitive or vulnerable information is found, it is advisable to seek advice from Github or to view steps towards deleting/removing this information from the repository (<a class="white" href="https://help.github.com/articles/remove-sensitive-data/">Remove Sensitive Information</a>)
-                </dis>
-            </footer>
+              </div>
+          </div>
+                <footer>
+                    <div>
+                        <p><dis>Technologies used:</dis></p>
+                        <p>
+                            <%= image_tag("ror", :size => "40x40") %>
+                            <%= image_tag("Rspec.png", :size => "40x40") %>
+                            <%= image_tag("Octokitty.png", :size => "40x40") %>
+                            <%= image_tag("omniauth.png", :size => "130x40") %>
+                            <%= image_tag("github.png", :size => "40x40") %>
+                            <%= image_tag("Oauth_logo.svg.png", :size => "40x40") %>
+                            <%= image_tag("oauth2.png", :size => "40x40") %>
+                        </p>
+                    </div>
+
+
+                    <dis>Disclaimer:
+                         This Site is thought to be used as a helpful tool to search for serious errors caused by any individual by revealing sensitive information such as; Secret_ID, App_ID and/or Contact Information.
+                         Through the use of OmniAuth, Oauth and Octokit, we have been able to reproduce the same level of security as that provided by Github when searching through publicly available repositories.
+                         All information found using the GitSnitch tool is open to the public, therefore if any sensitive or vulnerable information is found, it is advisable to seek advice from Github or to view steps towards deleting/removing this information from the repository (<a class="white" href="https://help.github.com/articles/remove-sensitive-data/">Remove Sensitive Information</a>)
+                    </dis>
+
+                </footer>
+
         </body>
 <!-- =======
   <head>

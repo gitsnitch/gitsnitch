@@ -1,43 +1,101 @@
 // Place all the styles related to the snitch controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
 body {
   text-align: center;
-  font-family: "Courier New", Courier, monospace;
   margin: auto;
-
-}
-
-h1 {
-margin-top: -2%;
-
-}
-
-header {
-  font-size: 300%;
-  margin: auto;
-}
-
-link {
-  font-size: 120%;
+  font-family: courier;
+  display: block;
+  background-image: url("bleck.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 dis {
-    font-size: 50%;
+    font-size: 1vh;
     width: 200px;
 }
 
 footer {
-  height: 25vh;
+  height: 15vh;
   color: white;
   background-color: grey;
 
 }
 
-.white {
-  color: white;
+h1 {
+    font-size: 15vh;
+    font-family: courier;
+    margin: auto;
+    font-weight: lighter;
+}
+
+p {
+  font-family: courier;
+  margin: auto;
+
+  font-weight: lighter;
+  font-size: 2.5vh;
 }
 
 .main {
-height: 100vh;
+  height: 100vh;
+}
+
+.top {
+  background-color: white;
+  height: auto;
+}
+
+.middle {
+  margin-top: 7vh;
+  height: auto;
+  background-color: white;
+}
+
+.bottom {
+  height: auto;
+  background-color: white;
+  margin: 5vh;
+}
+
+.button {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2vh;
+  cursor: pointer;
+  font-family: courier;
+}
+
+
+#comment {
+  margin-top: 1vh;
+  font-size: 1.8vh;
+}
+
+#description {
+  font-weight: lighter;
+}
+
+#disclaimer {
+  font-size: 1.5vh;
+}
+
+#more {
+  font-weight: normal;
+}
+
+#alert {
+  font-weight: lighter;
+  font-size: 80%;
+  max-width: 30%;
+  line-height:150%
 }
