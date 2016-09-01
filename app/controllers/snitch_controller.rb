@@ -4,5 +4,5 @@ class SnitchController < ApplicationController
     @user = session[:html]
   end
 
-  
+
 end

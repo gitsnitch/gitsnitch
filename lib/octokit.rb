@@ -29,10 +29,12 @@ class OctokitClient
   def html_get
     @results.each do |result|
       result[:items].each do |l|
+        if !@html.include?(l.html_url)
         @html << l.html_url
+        p "============#{@html}========="
+      end
     end
     end
-    "==============#{@html}==========="
   end
 
   def html_return

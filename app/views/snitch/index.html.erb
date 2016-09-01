@@ -21,7 +21,13 @@
             <div>
                 <link>
                       <%= button_to "Authorize Github Search".html_safe, user_github_omniauth_authorize_path, :id => "button" %>
+                      <%= button_to "Log out".html_safe, destroy_user_session_path, method: :delete, :id => "button" %>
                 </link>
+                <% if @user %>
+                  <% @user.each do |link|%>
+                    <li><a href="<%=link%>" target="_blank"</a><%= link %></li>
+                  <% end %>
+                <% end %>
             </div>
         </p>
         <%= notice %>
