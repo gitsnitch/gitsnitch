@@ -30,12 +30,13 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def octokit_client_create
     token = request.env["omniauth.auth"]["credentials"]["token"]
     username = request.env["omniauth.auth"]["info"]["nickname"]
+    login = request.env["omniauth.auth"]["extra"]["raw_info"]["login"]
     @client = OctokitClient.new(token, username)
     github_results
   end
 
   def github_results
-    session[:html] = @client.html_return
+    session[:html] = @client.fragment_return
   end
 
 end

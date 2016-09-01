@@ -10,7 +10,8 @@
     <%= button_to "Log out".html_safe, destroy_user_session_path, method: :delete, :id => "button" %>
     <% if @user %>
       <% @user.each do |link|%>
-        <li><a href="<%=link%>" target="_blank"</a><%= link %></li>
+        <li><a href="<%=link["url"]%>" target="_blank"</a><%= link["url"] %></li>
+        <li><%= link["fragment"] %></li>
       <% end %>
     <% end %>
   </body>
