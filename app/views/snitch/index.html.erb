@@ -16,20 +16,29 @@
       </div>
       <div class="middle">
         <div class="buttons">
-          <%=button_to "Authorize Search".html_safe, user_github_omniauth_authorize_path, :id => "authorize" %>
+          <% if !current_user %>
+            <%=button_to "Authorize Search".html_safe, user_github_omniauth_authorize_path, :id => "authorize" %>
           <p id="comment">* with Github</p>
+          <% end %>
           <br>
-           <%=button_to "Log Out".html_safe, destroy_user_session_path, method: :delete, :id => "out" %>
+           <% if current_user %>
+             <%=button_to "Log Out".html_safe, destroy_user_session_path, method: :delete, :id => "out" %>
+           <% end %>
           <p id="comment"><%= notice %></p>
         </div>
       </div>
         <div class="results">
           <p>
-            <% if @user %>
-              <% @user.each do |link|%>
-                <li><a href="<%=link["url"]%>" target="_blank"><%= link["url"] %></li></a>
-                <li><%= link["fragment"] %></li><br>
+            <% if @results %>
+            <ol>
+              <% @results.each do |link|%>
+              <li>
+                <ul><b>Github: </b><a href="<%=link["url"]%>" target="_blank"><%= link["url"] %></ul></a>
+                <ul><b>Raw Code: </b><a href="<%=link["raw"]%>" target="_blank"><%= link["raw"] %></ul></a>
+                <ul><b>Object Found: </b><%= link["fragment"] %></ul><br></li>
+
               <% end %>
+              </ol>
             <% end %>
           </p>
         </div>
@@ -37,8 +46,9 @@
     <footer>
       <p id="powered">Powered by</p>
         <%= image_tag("ror.png", id: "tech") %>
-        <%= image_tag("github.png", id: "git") %>
+        <%= image_tag("github-logo.png", id: "tech") %>
         <%= image_tag("octokit.png", id: "tech") %>
+        <%= image_tag("omniauth", id: "tech") %>
         <%= image_tag("oauth.png", id: "tech") %>
         <%= image_tag("oauth2.png", id: "tech") %>
         <p id="disclaimer">
