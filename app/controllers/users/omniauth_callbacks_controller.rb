@@ -1,45 +1,41 @@
+require './lib/octokit'
+
+
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def github
     @user = User.from_omniauth(request.env["omniauth.auth"])
-    token = request.env["omniauth.auth"]["credentials"]["token"]
-    @username = request.env["omniauth.auth"]["info"]["nickname"]
-    @client = Octokit::Client.new
-    @client.access_token = token
-    code_search
     if @user.persisted?
-      sign_in_and_redirect @user, :event => :authentication
-      set_flash_message(:notice, :success, :kind => "Github") if is_navigational_format?
+      account_verified
+      octokit_client_create
     else
-      session["devise.github_data"] = request.env["omniauth.auth"]
-      redirect_to new_user_registration_url
+      account_not_verified
     end
   end
 
-  # def repo_collect
-  #   @data = Array.new
-  #   @client.repositories.each do |repo|
-  #     @data << repo.name
-  #   end
-  #   code_search
-  # end
-
-  def code_search
-    @results = @client.search_code("facebook user:#{@username}")
-    html_get
+  def account_verified
+    sign_in_and_redirect @user, :event => :authentication
+    set_flash_message(:notice, :success, :kind => "Github") if is_navigational_format?
   end
 
-  def html_get
-    @html = Array.new
-    @results[:items].each do |result|
-      @html << result.html_url
-    end
-    session[:html] = @html
-    # p "=====================#{@html}================="
+  def account_not_verified
+    session["devise.github_data"] = request.env["omniauth.auth"]
+    redirect_to new_user_registration_url
   end
 
   def failure
     redirect_to root_path
+  end
+
+  def octokit_client_create
+    token = request.env["omniauth.auth"]["credentials"]["token"]
+    username = request.env["omniauth.auth"]["info"]["nickname"]
+    @client = OctokitClient.new(token, username)
+    github_results
+  end
+
+  def github_results
+    session[:html] = @client.fragment_return
   end
 
 end

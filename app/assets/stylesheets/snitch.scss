@@ -1,6 +1,120 @@
 // Place all the styles related to the snitch controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#button {
-  background-color: yellow;
+body {
+  text-align: center;
+  margin: auto;
+  font-family: courier;
+  display: block;
+  background-image: url("cityscape.png");
+  background-position: bottom 0px;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  max-width: 100vw;
+}
+
+footer {
+  height: auto;
+  background-color: black;
+  padding-bottom: 1vh;
+  padding-top: 70vh;
+}
+
+h1 {
+    font-size: 20vh;
+    font-family: courier;
+    margin: auto;
+    font-weight: lighter;
+}
+
+p {
+  font-family: courier;
+  margin: auto;
+  position: relative;
+  font-weight: lighter;
+  font-size: 2.5vh;
+  background: transparent;
+}
+
+.main {
+  min-height: 100vh;
+  height: auto;
+}
+
+.top {
+  height: 27vh;
+}
+
+.middle {
+  height: auto;
+  padding-top: 5vh;
+}
+
+.results {
+  height: auto;
+  margin-bottom: 50vh;
+}
+
+#authorize {
+  background-color: white;
+  border: 0.5vh solid;
+  border-color: black;
+  color: black;
+  padding: 2vh;
+  font-size: 3vh;
+  cursor: pointer;
+  font-family: courier;
+  border-radius: 50px;
+}
+
+#out {
+  background-color: white;
+  border: 0.5vh solid;
+  border-color: black;
+  color: black;
+  padding: 2vh;
+  font-size: 3vh;
+  cursor: pointer;
+  font-family: courier;
+  border-radius: 50px;
+}
+
+#logo {
+  height: 15vh;
+}
+
+#tech {
+  height: 5vh;
+}
+
+#git {
+  height: 5vh;
+  background-color: white;
+}
+
+#comment {
+  margin-top: 0.1vh;
+  font-size: 1.8vh;
+}
+
+#description {
+  font-weight: lighter;
+}
+
+#disclaimer {
+  font-size: 1.2vh;
+  color: white;
+}
+
+#more {
+  font-weight: normal;
+}
+
+#out {
+  margin-top: 1vh;
+}
+
+#powered {
+  color: white;
+  font-size: 1.8vh;
 }
