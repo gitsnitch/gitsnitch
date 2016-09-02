@@ -145,8 +145,6 @@
         1,
         0,
         0,
-        0,
-        0,
         null,
         null,
         1,
@@ -166,6 +164,7 @@
         0,
         0,
         0,
+        0,
         null,
         null,
         null,
@@ -175,6 +174,11 @@
         null,
         1,
         0,
+        0,
+        0,
+        null,
+        null,
+        1,
         0,
         null,
         null,
@@ -684,7 +688,6 @@
         0,
         null,
         null,
-        null,
         null
       ],
       "/Users/thadycondon/Documents/Projects/gitsnitch/app/controllers/application_controller.rb": [
@@ -762,6 +765,6 @@
         null
       ]
     },
-    "timestamp": 1472796213
+    "timestamp": 1472807649
   }
 }

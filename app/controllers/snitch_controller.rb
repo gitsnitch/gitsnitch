@@ -1,12 +1,11 @@
 class SnitchController < ApplicationController
 
   def index
-    @user = session[:html]
+    @results = session[:html]
   end
 
   def destroy
-    @user.destroy
+    @results.destroy
   end
-
 
 end

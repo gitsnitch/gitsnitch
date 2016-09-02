@@ -35,7 +35,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def github_results
-    session[:html] = @client.fragment_return
+    session[:html] = @client.results_return
   end
 
 end

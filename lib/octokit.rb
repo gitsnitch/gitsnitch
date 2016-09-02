@@ -25,9 +25,7 @@ class OctokitClient
   end
 
   def results_capture
-    results_raw = {:url => @data_url, :fragment => @data_fragment}
-    results_raw[:url].sub! "github.com", "raw.githubusercontent.com"
-    results_raw[:url].sub! "blob/", ""
+    results_raw = {:url => @data_url, :fragment => @data_fragment, :raw => @data_raw}
     @results_final << results_raw
   end
 
@@ -48,6 +46,7 @@ class OctokitClient
     if regex_test(fragment)
        @data_url = object.html_url
        @data_fragment = object.text_matches[0].fragment
+       raw_file(object)
     end
   end
 
@@ -58,13 +57,18 @@ class OctokitClient
   def data_reset
     @data_url = nil
     @data_fragment = nil
+    @data_raw = nil
   end
 
   def data_valid
     @data_url && @data_fragment
   end
 
-  def fragment_return
+  def raw_file(object)
+    @data_raw = "https://raw.githubusercontent.com" + "/#{@username}" + "/#{object[:repository].name}" + "/#{object[:url].split('=')[1]}" + "/#{object[:name]}"
+  end
+
+  def results_return
     @results_final
   end
 
