@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-02T07:03:33+01:00">2016-09-02T07:03:33+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-02T10:14:09+01:00">2016-09-02T10:14:09+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">76.25%</span></span>
+    (<span class="covered_percent"><span class="red">75.93%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.8
+         0.79
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>31</b> files in total.
-    <b>160</b> relevant lines. 
-    <span class="green"><b>122</b> lines covered</span> and
-    <span class="red"><b>38</b> lines missed </span>
+    <b>162</b> relevant lines. 
+    <span class="green"><b>123</b> lines covered</span> and
+    <span class="red"><b>39</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -63,7 +63,7 @@
       <tr>
         <td class="strong"><a href="#d9832eeac7523fd79fdd1bfe272ee950832bd93d" class="src_link" title="app/controllers/snitch_controller.rb">app/controllers/snitch_controller.rb</a></td>
         <td class="red strong">80.0 %</td>
-        <td>12</td>
+        <td>11</td>
         <td>5</td>
         <td>4</td>
         <td>1</td>
@@ -282,11 +282,11 @@
       
       <tr>
         <td class="strong"><a href="#fb93bad1be4a03442b908fd397e76b5eba01a27a" class="src_link" title="lib/octokit.rb">lib/octokit.rb</a></td>
-        <td class="red strong">27.91 %</td>
-        <td>71</td>
-        <td>43</td>
-        <td>12</td>
-        <td>31</td>
+        <td class="red strong">28.89 %</td>
+        <td>75</td>
+        <td>45</td>
+        <td>13</td>
+        <td>32</td>
         <td>0.3</td>
       </tr>
       
@@ -483,7 +483,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">    @user = session[:html]</code>
+          <code class="ruby">    @results = session[:html]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
@@ -507,7 +507,7 @@
         <li class="missed" data-hits="0" data-linenumber="8">
           
           
-          <code class="ruby">    @user.destroy</code>
+          <code class="ruby">    @results.destroy</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -523,12 +523,6 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">end</code>
@@ -3859,11 +3853,11 @@
         <div class="source_table" id="fb93bad1be4a03442b908fd397e76b5eba01a27a">
   <div class="header">
     <h3>lib/octokit.rb</h3>
-    <h4><span class="red">27.91 %</span> covered</h4>
+    <h4><span class="red">28.89 %</span> covered</h4>
     <div>
-      <b>43</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
-      <span class="red"><b>31</b> lines missed.</span>
+      <b>45</b> relevant lines. 
+      <span class="green"><b>13</b> lines covered</span> and
+      <span class="red"><b>32</b> lines missed.</span>
     </div>
   </div>
   
@@ -4035,199 +4029,199 @@
         <li class="missed" data-hits="0" data-linenumber="28">
           
           
-          <code class="ruby">    results_raw = {:url =&gt; @data_url, :fragment =&gt; @data_fragment}</code>
+          <code class="ruby">    results_raw = {:url =&gt; @data_url, :fragment =&gt; @data_fragment, :raw =&gt; @data_raw}</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="29">
           
           
-          <code class="ruby">    results_raw[:url].sub! &quot;github.com&quot;, &quot;raw.githubusercontent.com&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="30">
-          
-          
-          <code class="ruby">    results_raw[:url].sub! &quot;blob/&quot;, &quot;&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="31">
-          
-          
           <code class="ruby">    @results_final &lt;&lt; results_raw</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
+        <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
           <code class="ruby">  def data_check(object)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="35">
+        <li class="missed" data-hits="0" data-linenumber="33">
           
           
           <code class="ruby">    data_reset</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="36">
+        <li class="missed" data-hits="0" data-linenumber="34">
           
           
           <code class="ruby">    split_text = object.text_matches[0].fragment.split(&quot;=&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="37">
+        <li class="missed" data-hits="0" data-linenumber="35">
           
           
           <code class="ruby">    split_text.each do |string|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="38">
+        <li class="missed" data-hits="0" data-linenumber="36">
           
           
           <code class="ruby">      refine_split(object, string)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="38">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="42">
+        <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
           <code class="ruby">  def refine_split(object, string)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="43">
+        <li class="missed" data-hits="0" data-linenumber="41">
           
           
           <code class="ruby">    fragment = string.gsub(/[^0-9a-z ]/i, &#39;&#39;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="44">
+        <li class="missed" data-hits="0" data-linenumber="42">
           
           
           <code class="ruby">    data_assign(object, fragment)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
+        <li class="covered" data-hits="1" data-linenumber="45">
           <span class="hits">1</span>
           
           <code class="ruby">  def data_assign(object, fragment)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="48">
+        <li class="missed" data-hits="0" data-linenumber="46">
           
           
           <code class="ruby">    if regex_test(fragment)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="49">
+        <li class="missed" data-hits="0" data-linenumber="47">
           
           
           <code class="ruby">       @data_url = object.html_url</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="50">
+        <li class="missed" data-hits="0" data-linenumber="48">
           
           
           <code class="ruby">       @data_fragment = object.text_matches[0].fragment</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
+        <li class="missed" data-hits="0" data-linenumber="49">
+          
+          
+          <code class="ruby">       raw_file(object)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="54">
+        <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
           <code class="ruby">  def regex_test(string)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="55">
+        <li class="missed" data-hits="0" data-linenumber="54">
           
           
           <code class="ruby">    (/^[a-f0-9_]{32}*$/).match(string).to_s == string</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="56">
+        <li class="never" data-hits="" data-linenumber="55">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="57">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="58">
+        <li class="covered" data-hits="1" data-linenumber="57">
           <span class="hits">1</span>
           
           <code class="ruby">  def data_reset</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="59">
+        <li class="missed" data-hits="0" data-linenumber="58">
           
           
           <code class="ruby">    @data_url = nil</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="60">
+        <li class="missed" data-hits="0" data-linenumber="59">
           
           
           <code class="ruby">    @data_fragment = nil</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="60">
+          
+          
+          <code class="ruby">    @data_raw = nil</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="61">
@@ -4269,13 +4263,13 @@
         <li class="covered" data-hits="1" data-linenumber="67">
           <span class="hits">1</span>
           
-          <code class="ruby">  def fragment_return</code>
+          <code class="ruby">  def raw_file(object)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="68">
           
           
-          <code class="ruby">    @results_final</code>
+          <code class="ruby">    @data_raw = &quot;https://raw.githubusercontent.com&quot; + &quot;/#{@username}&quot; + &quot;/#{object[:repository].name}&quot; + &quot;/#{object[:url].split(&#39;=&#39;)[1]}&quot; + &quot;/#{object[:name]}&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="69">
@@ -4290,7 +4284,31 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="71">
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def results_return</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="72">
+          
+          
+          <code class="ruby">    @results_final</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
           
           
           <code class="ruby">end</code>
@@ -4983,7 +5001,7 @@
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(page).to have_button &#39;Log in with Github&#39;</code>
+          <code class="ruby">      expect(page).to have_button &#39;Authorize Search&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
