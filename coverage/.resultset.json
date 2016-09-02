@@ -730,6 +730,8 @@
         null,
         1,
         null,
+        2,
+        null,
         null
       ],
       "/Users/thadycondon/Documents/Projects/gitsnitch/spec/snitch_feature_spec.rb": [
@@ -765,6 +767,6 @@
         null
       ]
     },
-    "timestamp": 1472807649
+    "timestamp": 1472808251
   }
 }
