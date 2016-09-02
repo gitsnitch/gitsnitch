@@ -27,9 +27,11 @@
           <p>
             <% if @results %>
               <% @results.each do |link|%>
-                <li><a href="<%=link["url"]%>" target="_blank"><%= link["url"] %></li></a>
-                <li><a href="<%=link["raw"]%>" target="_blank"><%= link["raw"] %></li></a>
-                <li><%= link["fragment"] %></li><br>
+              <ol><li>
+                <ul><b>Github: </b><a href="<%=link["url"]%>" target="_blank"><%= link["url"] %></ul></a>
+                <ul><b>Raw Code: </b><a href="<%=link["raw"]%>" target="_blank"><%= link["raw"] %></ul></a>
+                <ul><b>Object Found: </b><%= link["fragment"] %></ul><br></li>
+              </ol>
               <% end %>
             <% end %>
           </p>
