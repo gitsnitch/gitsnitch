@@ -7,7 +7,7 @@ body {
   font-family: courier;
   display: block;
   background-image: url("cityscape.png");
-  background-position: bottom 0px;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100vw;
   max-width: 100vw;
@@ -17,7 +17,6 @@ footer {
   height: auto;
   background-color: black;
   padding-bottom: 1vh;
-  padding-top: 70vh;
 }
 
 h1 {
@@ -36,11 +35,6 @@ p {
   background: transparent;
 }
 
-.main {
-  min-height: 100vh;
-  height: auto;
-}
-
 .top {
   height: 27vh;
 }
@@ -53,6 +47,14 @@ p {
 .results {
   height: auto;
   margin-bottom: 50vh;
+  margin-top: 5vh;
+  text-align: left;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+
+b {
+  font-size: 2vh;
 }
 
 #authorize {
