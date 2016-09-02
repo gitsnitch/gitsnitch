@@ -5,8 +5,46 @@
     <title>GitSnitch</title>
   </head>
   <body>
-    <h1>GitSnitch</h1>
-    <%= link_to "Log in with Github", user_github_omniauth_authorize_path %>
+    <div class="main">
+      <div class="top">
+        <div id="title">
+          <h1>
+            <%= image_tag("gitsnitch.png", :id => "logo") %>GitSnitch.
+          </h1>
+        </div>
+        <p id="description"> Search your Github repositries for personal information that could be putting you at risk
+      </div>
+      <div class="middle">
+        <div class="buttons">
+          <%=button_to "Authorize Search", user_github_omniauth_authorize_path, :id => "authorize" %>
+          <p id="comment">* with Github</p>
+          <br>
+           <%=button_to "Log Out", user_github_omniauth_authorize_path, :id => "out" %>
+          <p id="comment"><%= notice %></p>
+        </div>
+      </div>
+      <% if true %>
+      <% else %>
+        <div class="results">
+          <p>
+          </p>
+        </div>
+      <% end %>
+    </div>
+    <footer>
+      <p id="powered">Powered by</p>
+        <%= image_tag("ror.png", id: "tech") %>
+        <%= image_tag("github.png", id: "git") %>
+        <%= image_tag("octokit.png", id: "tech") %>
+        <%= image_tag("oauth.png", id: "tech") %>
+        <%= image_tag("oauth2.png", id: "tech") %>
+        <p id="disclaimer">
+          Disclaimer:
+               This Site is thought to be used as a helpful tool to search for serious errors caused by any individual by revealing sensitive information such as; Secret_ID, App_ID and/or Contact Information.
+               Through the use of OmniAuth, Oauth and Octokit, we have been able to reproduce the same level of security as that provided by Github when searching through publicly available repositories.
+               All information found using the GitSnitch tool is open to the public, therefore if any sensitive or vulnerable information is found, it is advisable to seek advice from Github or to view steps towards deleting/removing this information from the repository
+        </p>
+    </footer>
 
   </body>
 </html>
