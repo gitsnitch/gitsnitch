@@ -1,4 +1,4 @@
-require './lib/octokit'
+require './lib/repo_search'
 
 
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
@@ -30,7 +30,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def octokit_client_create
     token = request.env["omniauth.auth"]["credentials"]["token"]
     username = request.env["omniauth.auth"]["info"]["nickname"]
-    @client = OctokitClient.new(token, username)
+    @client = RepoSearch.new(token, username)
     github_results
   end
 

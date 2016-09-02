@@ -1,4 +1,4 @@
-class OctokitClient
+class RepoSearch
 
   def initialize(token, username)
     @username = username
