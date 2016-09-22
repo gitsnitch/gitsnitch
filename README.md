@@ -1,24 +1,5 @@
-# README
+# GitSnitch
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a tool to search user's GitHub repos for carelessly pushed Facebook secret keys.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It is a single page web app build with Ruby on Rails in four days by four Makers Academy students. It uses GitHub search API and a regular expression filter to check whether a user has Facebook secrets in their repos.
