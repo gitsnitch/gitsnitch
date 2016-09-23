@@ -1,4 +1,4 @@
-require './lib/repo_search'
+require './lib/octokit_search'
 
 
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
@@ -7,7 +7,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     @user = User.from_omniauth(request.env["omniauth.auth"])
     if @user.persisted?
       account_verified
-      octokit_client_create
+      octokit_client
     else
       account_not_verified
     end
@@ -19,7 +19,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def account_not_verified
-    session["devise.github_data"] = request.env["omniauth.auth"]
+    # session["devise.github_data"] = request.env["omniauth.auth"]
     redirect_to new_user_registration_url
   end
 
@@ -27,15 +27,15 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     redirect_to root_path
   end
 
-  def octokit_client_create
-    token = request.env["omniauth.auth"]["credentials"]["token"]
+  def octokit_client
     username = request.env["omniauth.auth"]["info"]["nickname"]
-    @client = RepoSearch.new(token, username)
+    @client = OctokitSearch.new(username)
+    @client.search_manager
     github_results
   end
 
   def github_results
-    session[:html] = @client.results_return
+    session[:html] = @client.results
   end
 
 end

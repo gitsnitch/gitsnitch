@@ -1,0 +1,655 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://github.com/login/oauth/authorize?client_id=26eddff245d219491bef&redirect_uri=http://www.example.com/users/auth/github/callback&response_type=code&state=48b4a2118b57b25ba1f129a9ef9d83b9ae47102ba428b550
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.2 (KHTML, like
+        Gecko) Chrome/15.0.853.0 Safari/535.2
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Host:
+      - github.com
+      Referer:
+      - !ruby/object:URI::HTTP
+        scheme: http
+        user: 
+        password: 
+        host: www.example.com
+        port: 80
+        path: "/"
+        query: 
+        opaque: 
+        fragment: 
+        parser: &1 !ruby/object:URI::RFC3986_Parser
+          regexp:
+            :SCHEME: !ruby/regexp /\A[A-Za-z][A-Za-z0-9+\-.]*\z/
+            :USERINFO: !ruby/regexp /\A(?:%\h\h|[!$&-.0-;=A-Z_a-z~])*\z/
+            :HOST: !ruby/regexp /\A(?:(?<IP-literal>\[(?:(?<IPv6address>(?:\h{1,4}:){6}(?<ls32>\h{1,4}:\h{1,4}|(?<IPv4address>(?<dec-octet>[1-9]\d|1\d{2}|2[0-4]\d|25[0-5]|\d)\.\g<dec-octet>\.\g<dec-octet>\.\g<dec-octet>))|::(?:\h{1,4}:){5}\g<ls32>|\h{,4}::(?:\h{1,4}:){4}\g<ls32>|(?:(?:\h{1,4}:)?\h{1,4})?::(?:\h{1,4}:){3}\g<ls32>|(?:(?:\h{1,4}:){,2}\h{1,4})?::(?:\h{1,4}:){2}\g<ls32>|(?:(?:\h{1,4}:){,3}\h{1,4})?::\h{1,4}:\g<ls32>|(?:(?:\h{1,4}:){,4}\h{1,4})?::\g<ls32>|(?:(?:\h{1,4}:){,5}\h{1,4})?::\h{1,4}|(?:(?:\h{1,4}:){,6}\h{1,4})?::)|(?<IPvFuture>v\h+\.[!$&-.0-;=A-Z_a-z~]+))\])|\g<IPv4address>|(?<reg-name>(?:%\h\h|[!$&-.0-9;=A-Z_a-z~])*))\z/
+            :ABS_PATH: !ruby/regexp /\A\/(?:%\h\h|[!$&-.0-;=@-Z_a-z~])*(?:\/(?:%\h\h|[!$&-.0-;=@-Z_a-z~])*)*\z/
+            :REL_PATH: !ruby/regexp /\A(?:%\h\h|[!$&-.0-;=@-Z_a-z~])+(?:\/(?:%\h\h|[!$&-.0-;=@-Z_a-z~])*)*\z/
+            :QUERY: !ruby/regexp /\A(?:%\h\h|[!$&-.0-;=@-Z_a-z~\/?])*\z/
+            :FRAGMENT: !ruby/regexp /\A(?:%\h\h|[!$&-.0-;=@-Z_a-z~\/?])*\z/
+            :OPAQUE: !ruby/regexp /\A(?:[^\/].*)?\z/
+            :PORT: !ruby/regexp /\A[\x09\x0a\x0c\x0d ]*\d*[\x09\x0a\x0c\x0d ]*\z/
+      Http-Referer:
+      - http://www.example.com/
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Mon, 05 Sep 2016 09:03:09 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 302 Found
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      - X-PJAX
+      Location:
+      - https://github.com/login?client_id=26eddff245d219491bef&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3D26eddff245d219491bef%26redirect_uri%3Dhttp%253A%252F%252Fwww.example.com%252Fusers%252Fauth%252Fgithub%252Fcallback%26response_type%3Dcode%26state%3D48b4a2118b57b25ba1f129a9ef9d83b9ae47102ba428b550
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _gh_sess=eyJzZXNzaW9uX2lkIjoiMDIwZDAzNWU2MzJhMDY5ZjkxZjlkMGVkMjk3YzEyZDMiLCJyZWZlcnJhbF9jb2RlIjoiaHR0cDovL3d3dy5leGFtcGxlLmNvbS8ifQ%3D%3D--f130b999104d0326fdb86acac33a8bd86dd42194;
+        path=/; secure; HttpOnly
+      X-Request-Id:
+      - f42642b78ffd593fb1b2559dcf792b65
+      X-Runtime:
+      - '0.028730'
+      Content-Security-Policy:
+      - 'default-src ''none''; base-uri ''self''; block-all-mixed-content; child-src
+        render.githubusercontent.com; connect-src ''self'' uploads.github.com status.github.com
+        api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com wss://live.github.com;
+        font-src assets-cdn.github.com; form-action ''self'' github.com gist.github.com;
+        frame-ancestors ''none''; frame-src render.githubusercontent.com; img-src
+        ''self'' data: assets-cdn.github.com identicons.github.com collector.githubapp.com
+        github-cloud.s3.amazonaws.com *.githubusercontent.com; media-src ''none'';
+        object-src assets-cdn.github.com; plugin-types application/x-shockwave-flash;
+        script-src assets-cdn.github.com; style-src ''unsafe-inline'' assets-cdn.github.com'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Public-Key-Pins:
+      - max-age=5184000; pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=";
+        pin-sha256="RRM1dGqnDFsCJXBTHky16vi1obOlCgFFn/yOhI/y+ho="; pin-sha256="k2v657xBsOVe1PQRwOsHsw3bsGT2VzIqz5K+59sNQws=";
+        pin-sha256="K87oWBWM9UZfyddvDfoxL+8lpNyoUB2ptGtn0fv6G2Q="; pin-sha256="IQBnNBEiFuhj+8x6X8XLgh01V9Ic5/V3IRQLNFFc7v4=";
+        pin-sha256="iie1VXtL7HzAMF+/PVPR9xzT80kQxdZeJ+zduCB3uj0="; pin-sha256="LvRiGEjRqfzurezaWuj8Wie2gyHMrW5Q06LspMnox7A=";
+        includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - a128136e4734a9f74c013356c773ece7
+      X-Github-Request-Id:
+      - B935E346:0849:42E5AE3:57CD34CD
+    body:
+      encoding: UTF-8
+      string: <html><body>You are being <a href="https://github.com/login?client_id=26eddff245d219491bef&amp;return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3D26eddff245d219491bef%26redirect_uri%3Dhttp%253A%252F%252Fwww.example.com%252Fusers%252Fauth%252Fgithub%252Fcallback%26response_type%3Dcode%26state%3D48b4a2118b57b25ba1f129a9ef9d83b9ae47102ba428b550">redirected</a>.</body></html>
+    http_version: 
+  recorded_at: Mon, 05 Sep 2016 09:03:09 GMT
+- request:
+    method: get
+    uri: https://github.com/login?client_id=26eddff245d219491bef&return_to=/login/oauth/authorize?client_id=26eddff245d219491bef%26redirect_uri=http%253A%252F%252Fwww.example.com%252Fusers%252Fauth%252Fgithub%252Fcallback%26response_type=code%26state=48b4a2118b57b25ba1f129a9ef9d83b9ae47102ba428b550
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.2 (KHTML, like
+        Gecko) Chrome/15.0.853.0 Safari/535.2
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - _gh_sess=eyJzZXNzaW9uX2lkIjoiMDIwZDAzNWU2MzJhMDY5ZjkxZjlkMGVkMjk3YzEyZDMiLCJyZWZlcnJhbF9jb2RlIjoiaHR0cDovL3d3dy5leGFtcGxlLmNvbS8ifQ%3D%3D--f130b999104d0326fdb86acac33a8bd86dd42194
+      Host:
+      - github.com
+      Referer:
+      - !ruby/object:URI::HTTP
+        scheme: http
+        user: 
+        password: 
+        host: www.example.com
+        port: 80
+        path: "/"
+        query: 
+        opaque: 
+        fragment: 
+        parser: *1
+      Http-Referer:
+      - http://www.example.com/
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Mon, 05 Sep 2016 09:03:09 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      Cache-Control:
+      - no-cache, no-store
+      Vary:
+      - Accept-Encoding
+      - X-PJAX
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _gh_sess=eyJzZXNzaW9uX2lkIjoiMDIwZDAzNWU2MzJhMDY5ZjkxZjlkMGVkMjk3YzEyZDMiLCJyZWZlcnJhbF9jb2RlIjoiaHR0cDovL3d3dy5leGFtcGxlLmNvbS8iLCJyZXR1cm5fdG8iOiIvbG9naW4vb2F1dGgvYXV0aG9yaXplP2NsaWVudF9pZD0yNmVkZGZmMjQ1ZDIxOTQ5MWJlZiZyZWRpcmVjdF91cmk9aHR0cCUzQSUyRiUyRnd3dy5leGFtcGxlLmNvbSUyRnVzZXJzJTJGYXV0aCUyRmdpdGh1YiUyRmNhbGxiYWNrJnJlc3BvbnNlX3R5cGU9Y29kZSZzdGF0ZT00OGI0YTIxMThiNTdiMjViYTFmMTI5YTllZjlkODNiOWFlNDcxMDJiYTQyOGI1NTAiLCJfY3NyZl90b2tlbiI6IjFwMnZXMDJRQnZCRk51K2tiV0l3S1RKUnZkeVpXclRCdVRWUFVINkJYdFU9IiwiZmxhc2giOnsiZGlzY2FyZCI6W10sImZsYXNoZXMiOnsiYW5hbHl0aWNzX2xvY2F0aW9uX3F1ZXJ5X3N0cmlwIjoidHJ1ZSJ9fX0%3D--92e3b35ebcfc4a9828fa3defa138ce4657843fa5;
+        path=/; secure; HttpOnly
+      - logged_in=no; domain=.github.com; path=/; expires=Fri, 05 Sep 2036 09:03:09
+        -0000; secure; HttpOnly
+      X-Request-Id:
+      - 479cf9198863bb3a43f96ef28391f154
+      X-Runtime:
+      - '0.019798'
+      Content-Security-Policy:
+      - 'default-src ''none''; base-uri ''self''; block-all-mixed-content; child-src
+        render.githubusercontent.com; connect-src ''self'' uploads.github.com status.github.com
+        api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com wss://live.github.com;
+        font-src assets-cdn.github.com; form-action ''self'' github.com gist.github.com;
+        frame-ancestors ''none''; frame-src render.githubusercontent.com; img-src
+        ''self'' data: assets-cdn.github.com identicons.github.com collector.githubapp.com
+        github-cloud.s3.amazonaws.com *.githubusercontent.com; media-src ''none'';
+        object-src assets-cdn.github.com; plugin-types application/x-shockwave-flash;
+        script-src assets-cdn.github.com; style-src ''unsafe-inline'' assets-cdn.github.com'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Public-Key-Pins:
+      - max-age=5184000; pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=";
+        pin-sha256="RRM1dGqnDFsCJXBTHky16vi1obOlCgFFn/yOhI/y+ho="; pin-sha256="k2v657xBsOVe1PQRwOsHsw3bsGT2VzIqz5K+59sNQws=";
+        pin-sha256="K87oWBWM9UZfyddvDfoxL+8lpNyoUB2ptGtn0fv6G2Q="; pin-sha256="IQBnNBEiFuhj+8x6X8XLgh01V9Ic5/V3IRQLNFFc7v4=";
+        pin-sha256="iie1VXtL7HzAMF+/PVPR9xzT80kQxdZeJ+zduCB3uj0="; pin-sha256="LvRiGEjRqfzurezaWuj8Wie2gyHMrW5Q06LspMnox7A=";
+        includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - 87f5c5d7dd60f60a2cf951a9aeddef08
+      Content-Encoding:
+      - gzip
+      X-Github-Request-Id:
+      - B935E346:084E:4548A90:57CD34CD
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+        UniMXCn1L8Fe/C9AlC5gHjYAAA==
+    http_version: 
+  recorded_at: Mon, 05 Sep 2016 09:03:09 GMT
+- request:
+    method: get
+    uri: https://github.com/login/oauth/authorize?client_id=26eddff245d219491bef&redirect_uri=http://www.example.com/users/auth/github/callback&response_type=code&state=38614385ffd114f31c1a40ed085651da47485d79c16cdf48
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.2 (KHTML, like
+        Gecko) Chrome/15.0.853.0 Safari/535.2
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Host:
+      - github.com
+      Referer:
+      - !ruby/object:URI::HTTP
+        scheme: http
+        user: 
+        password: 
+        host: www.example.com
+        port: 80
+        path: "/"
+        query: 
+        opaque: 
+        fragment: 
+        parser: &2 !ruby/object:URI::RFC3986_Parser
+          regexp:
+            :SCHEME: !ruby/regexp /\A[A-Za-z][A-Za-z0-9+\-.]*\z/
+            :USERINFO: !ruby/regexp /\A(?:%\h\h|[!$&-.0-;=A-Z_a-z~])*\z/
+            :HOST: !ruby/regexp /\A(?:(?<IP-literal>\[(?:(?<IPv6address>(?:\h{1,4}:){6}(?<ls32>\h{1,4}:\h{1,4}|(?<IPv4address>(?<dec-octet>[1-9]\d|1\d{2}|2[0-4]\d|25[0-5]|\d)\.\g<dec-octet>\.\g<dec-octet>\.\g<dec-octet>))|::(?:\h{1,4}:){5}\g<ls32>|\h{,4}::(?:\h{1,4}:){4}\g<ls32>|(?:(?:\h{1,4}:)?\h{1,4})?::(?:\h{1,4}:){3}\g<ls32>|(?:(?:\h{1,4}:){,2}\h{1,4})?::(?:\h{1,4}:){2}\g<ls32>|(?:(?:\h{1,4}:){,3}\h{1,4})?::\h{1,4}:\g<ls32>|(?:(?:\h{1,4}:){,4}\h{1,4})?::\g<ls32>|(?:(?:\h{1,4}:){,5}\h{1,4})?::\h{1,4}|(?:(?:\h{1,4}:){,6}\h{1,4})?::)|(?<IPvFuture>v\h+\.[!$&-.0-;=A-Z_a-z~]+))\])|\g<IPv4address>|(?<reg-name>(?:%\h\h|[!$&-.0-9;=A-Z_a-z~])*))\z/
+            :ABS_PATH: !ruby/regexp /\A\/(?:%\h\h|[!$&-.0-;=@-Z_a-z~])*(?:\/(?:%\h\h|[!$&-.0-;=@-Z_a-z~])*)*\z/
+            :REL_PATH: !ruby/regexp /\A(?:%\h\h|[!$&-.0-;=@-Z_a-z~])+(?:\/(?:%\h\h|[!$&-.0-;=@-Z_a-z~])*)*\z/
+            :QUERY: !ruby/regexp /\A(?:%\h\h|[!$&-.0-;=@-Z_a-z~\/?])*\z/
+            :FRAGMENT: !ruby/regexp /\A(?:%\h\h|[!$&-.0-;=@-Z_a-z~\/?])*\z/
+            :OPAQUE: !ruby/regexp /\A(?:[^\/].*)?\z/
+            :PORT: !ruby/regexp /\A[\x09\x0a\x0c\x0d ]*\d*[\x09\x0a\x0c\x0d ]*\z/
+      Http-Referer:
+      - http://www.example.com/
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Mon, 05 Sep 2016 09:09:36 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 302 Found
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      - X-PJAX
+      Location:
+      - https://github.com/login?client_id=26eddff245d219491bef&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3D26eddff245d219491bef%26redirect_uri%3Dhttp%253A%252F%252Fwww.example.com%252Fusers%252Fauth%252Fgithub%252Fcallback%26response_type%3Dcode%26state%3D38614385ffd114f31c1a40ed085651da47485d79c16cdf48
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _gh_sess=eyJzZXNzaW9uX2lkIjoiZjM4MjY5NzFjNWFlODE3YWE2N2E4YzdlN2IzYjQyNGYiLCJyZWZlcnJhbF9jb2RlIjoiaHR0cDovL3d3dy5leGFtcGxlLmNvbS8ifQ%3D%3D--622a93799819783da3abb61acc959ce7f0e36046;
+        path=/; secure; HttpOnly
+      X-Request-Id:
+      - b6e4a6ba874e75651fa4d186a9b453e9
+      X-Runtime:
+      - '0.004758'
+      Content-Security-Policy:
+      - 'default-src ''none''; base-uri ''self''; block-all-mixed-content; child-src
+        render.githubusercontent.com; connect-src ''self'' uploads.github.com status.github.com
+        api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com wss://live.github.com;
+        font-src assets-cdn.github.com; form-action ''self'' github.com gist.github.com;
+        frame-ancestors ''none''; frame-src render.githubusercontent.com; img-src
+        ''self'' data: assets-cdn.github.com identicons.github.com collector.githubapp.com
+        github-cloud.s3.amazonaws.com *.githubusercontent.com; media-src ''none'';
+        object-src assets-cdn.github.com; plugin-types application/x-shockwave-flash;
+        script-src assets-cdn.github.com; style-src ''unsafe-inline'' assets-cdn.github.com'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Public-Key-Pins:
+      - max-age=5184000; pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=";
+        pin-sha256="RRM1dGqnDFsCJXBTHky16vi1obOlCgFFn/yOhI/y+ho="; pin-sha256="k2v657xBsOVe1PQRwOsHsw3bsGT2VzIqz5K+59sNQws=";
+        pin-sha256="K87oWBWM9UZfyddvDfoxL+8lpNyoUB2ptGtn0fv6G2Q="; pin-sha256="IQBnNBEiFuhj+8x6X8XLgh01V9Ic5/V3IRQLNFFc7v4=";
+        pin-sha256="iie1VXtL7HzAMF+/PVPR9xzT80kQxdZeJ+zduCB3uj0="; pin-sha256="LvRiGEjRqfzurezaWuj8Wie2gyHMrW5Q06LspMnox7A=";
+        includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - 9835a984a05caa405eb61faaa1546741
+      X-Github-Request-Id:
+      - B935E346:084E:4560F47:57CD3650
+    body:
+      encoding: UTF-8
+      string: <html><body>You are being <a href="https://github.com/login?client_id=26eddff245d219491bef&amp;return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3D26eddff245d219491bef%26redirect_uri%3Dhttp%253A%252F%252Fwww.example.com%252Fusers%252Fauth%252Fgithub%252Fcallback%26response_type%3Dcode%26state%3D38614385ffd114f31c1a40ed085651da47485d79c16cdf48">redirected</a>.</body></html>
+    http_version: 
+  recorded_at: Mon, 05 Sep 2016 09:09:36 GMT
+- request:
+    method: get
+    uri: https://github.com/login?client_id=26eddff245d219491bef&return_to=/login/oauth/authorize?client_id=26eddff245d219491bef%26redirect_uri=http%253A%252F%252Fwww.example.com%252Fusers%252Fauth%252Fgithub%252Fcallback%26response_type=code%26state=38614385ffd114f31c1a40ed085651da47485d79c16cdf48
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.2 (KHTML, like
+        Gecko) Chrome/15.0.853.0 Safari/535.2
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - _gh_sess=eyJzZXNzaW9uX2lkIjoiZjM4MjY5NzFjNWFlODE3YWE2N2E4YzdlN2IzYjQyNGYiLCJyZWZlcnJhbF9jb2RlIjoiaHR0cDovL3d3dy5leGFtcGxlLmNvbS8ifQ%3D%3D--622a93799819783da3abb61acc959ce7f0e36046
+      Host:
+      - github.com
+      Referer:
+      - !ruby/object:URI::HTTP
+        scheme: http
+        user: 
+        password: 
+        host: www.example.com
+        port: 80
+        path: "/"
+        query: 
+        opaque: 
+        fragment: 
+        parser: *2
+      Http-Referer:
+      - http://www.example.com/
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Mon, 05 Sep 2016 09:09:37 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      Cache-Control:
+      - no-cache, no-store
+      Vary:
+      - Accept-Encoding
+      - X-PJAX
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Set-Cookie:
+      - _gh_sess=eyJzZXNzaW9uX2lkIjoiZjM4MjY5NzFjNWFlODE3YWE2N2E4YzdlN2IzYjQyNGYiLCJyZWZlcnJhbF9jb2RlIjoiaHR0cDovL3d3dy5leGFtcGxlLmNvbS8iLCJyZXR1cm5fdG8iOiIvbG9naW4vb2F1dGgvYXV0aG9yaXplP2NsaWVudF9pZD0yNmVkZGZmMjQ1ZDIxOTQ5MWJlZiZyZWRpcmVjdF91cmk9aHR0cCUzQSUyRiUyRnd3dy5leGFtcGxlLmNvbSUyRnVzZXJzJTJGYXV0aCUyRmdpdGh1YiUyRmNhbGxiYWNrJnJlc3BvbnNlX3R5cGU9Y29kZSZzdGF0ZT0zODYxNDM4NWZmZDExNGYzMWMxYTQwZWQwODU2NTFkYTQ3NDg1ZDc5YzE2Y2RmNDgiLCJfY3NyZl90b2tlbiI6IkpwSG9VYnpPWExCRU9pSEkzRjZwbjhNUmw3Vnc0U09vUHVVNFhvN2RPa2s9IiwiZmxhc2giOnsiZGlzY2FyZCI6W10sImZsYXNoZXMiOnsiYW5hbHl0aWNzX2xvY2F0aW9uX3F1ZXJ5X3N0cmlwIjoidHJ1ZSJ9fX0%3D--16a9f8159add27acb0b80db6b4f473830a31261c;
+        path=/; secure; HttpOnly
+      - logged_in=no; domain=.github.com; path=/; expires=Fri, 05 Sep 2036 09:09:37
+        -0000; secure; HttpOnly
+      X-Request-Id:
+      - 69346160caf909d714d27db3addd9f0b
+      X-Runtime:
+      - '0.015357'
+      Content-Security-Policy:
+      - 'default-src ''none''; base-uri ''self''; block-all-mixed-content; child-src
+        render.githubusercontent.com; connect-src ''self'' uploads.github.com status.github.com
+        api.github.com www.google-analytics.com github-cloud.s3.amazonaws.com wss://live.github.com;
+        font-src assets-cdn.github.com; form-action ''self'' github.com gist.github.com;
+        frame-ancestors ''none''; frame-src render.githubusercontent.com; img-src
+        ''self'' data: assets-cdn.github.com identicons.github.com collector.githubapp.com
+        github-cloud.s3.amazonaws.com *.githubusercontent.com; media-src ''none'';
+        object-src assets-cdn.github.com; plugin-types application/x-shockwave-flash;
+        script-src assets-cdn.github.com; style-src ''unsafe-inline'' assets-cdn.github.com'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Public-Key-Pins:
+      - max-age=5184000; pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=";
+        pin-sha256="RRM1dGqnDFsCJXBTHky16vi1obOlCgFFn/yOhI/y+ho="; pin-sha256="k2v657xBsOVe1PQRwOsHsw3bsGT2VzIqz5K+59sNQws=";
+        pin-sha256="K87oWBWM9UZfyddvDfoxL+8lpNyoUB2ptGtn0fv6G2Q="; pin-sha256="IQBnNBEiFuhj+8x6X8XLgh01V9Ic5/V3IRQLNFFc7v4=";
+        pin-sha256="iie1VXtL7HzAMF+/PVPR9xzT80kQxdZeJ+zduCB3uj0="; pin-sha256="LvRiGEjRqfzurezaWuj8Wie2gyHMrW5Q06LspMnox7A=";
+        includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - b26767d88b31b8e1e88f61422786ec5e
+      Content-Encoding:
+      - gzip
+      X-Github-Request-Id:
+      - B935E346:084F:212FD29:57CD3651
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+        o22Xfq8M5Er7lMJj5Eqpfwn24n8Bx0fHcB42AAA=
+    http_version: 
+  recorded_at: Mon, 05 Sep 2016 09:09:37 GMT
+recorded_with: VCR 3.0.3

@@ -27,6 +27,7 @@ gem 'devise'
 gem 'omniauth-github'
 gem 'dotenv-rails'
 gem 'octokit'
+gem 'json'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -44,6 +45,8 @@ group :development, :test do
   gem 'capybara'
   gem 'shoulda'
   gem 'webmock'
+  gem 'vcr'
+  gem 'capybara-mechanize'
 end
 
 group :development do
