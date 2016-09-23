@@ -1,8 +1,9 @@
 class ResponseStub
 
-  attr_reader :secret_valid, :secret_invalid, :url, :raw, :fragment
+  attr_reader :secret_valid, :secret_invalid, :url, :raw, :fragment, :trimmed_text
 
   def initialize
+    @trimmed_text = ["4e3e333bdf627ddae5037a75c414e354"]
     @secret_valid = "4e3e333bdf627ddae5037a75c414e354"
     @secret_invalid= "4e3e333bdf627ddae5037a75c414"
     @url = "https://github.com/CONDOTH1/gitsnitch_test/blob/af12ec7492c394da29f85d3c03a53cc79a74251b//testfile.md"
