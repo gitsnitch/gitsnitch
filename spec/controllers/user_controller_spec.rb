@@ -28,10 +28,6 @@ RSpec.describe Users::OmniauthCallbacksController do
 
   describe 'authorizing' do
 
-    # it 'success' do
-    #   expect(response).to be_success
-    # end
-
     it 'saves user when authenticated' do
       user = User.from_omniauth(@request.env["omniauth.auth"])
       expect(user.persisted?).to be_truthy

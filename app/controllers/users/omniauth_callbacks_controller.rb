@@ -19,7 +19,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def account_not_verified
-    # session["devise.github_data"] = request.env["omniauth.auth"]
     redirect_to new_user_registration_url
   end
 

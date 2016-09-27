@@ -1,9 +1,9 @@
 require './spec/rails_helper'
 
-describe 'RepoSearch' do
+describe 'OctokitSearch' do
 
   before do
-    @repo_search = RepoSearch.new('BigBerta')
+    @repo_search = OctokitSearch.new('BigBerta')
     @repo_search.search_manager
     octokit_response = ResponseStub.new
     @url = octokit_response.url

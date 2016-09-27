@@ -7,9 +7,9 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rails'
 require 'webmock/rspec'
-require 'support/factory_girl'
 require 'devise'
 require 'capybara/mechanize'
+require 'support/omniauth_helper'
 
 
 # Add additional requires below this line. Rails is not loaded until this point!

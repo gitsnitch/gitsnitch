@@ -14,7 +14,6 @@ describe 'octokit_results' do
     @object = octokit_response.valid.pop[:items][0]
   end
 
-
   describe 'final instance variables' do
 
     it 'captures the correct url and saves it' do

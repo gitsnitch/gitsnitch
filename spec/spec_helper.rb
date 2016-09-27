@@ -48,10 +48,13 @@ RSpec.configure do |config|
   end
 
   OmniAuth.config.test_mode = true
-  OmniAuth.config.add_mock(:github, { :uid => '12345', "credentials"=>{
+
+  OmniAuth.config.add_mock(:github, { :uid => '12345', "credentials"=> {
       :token =>"4e3e333bdf627ddae5037a75c414e354",
       :secret =>"SNZT7S70xZIhANfZzgHUEpZMPSsGEHw"
     }, :info => { :email => 'fake@example.com', :password => '65432ANFLKJA10', :nickname => "BigBerta"}})
+
+
   # rspec-mocks config goes here. You can use an alternate test double
   # library (such as bogus or mocha) by changing the `mock_with` option here.
   config.mock_with :rspec do |mocks|
