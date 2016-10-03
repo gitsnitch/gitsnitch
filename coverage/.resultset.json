@@ -591,6 +591,7 @@
         null,
         null,
         1,
+        1,
         null,
         1,
         null,
@@ -599,6 +600,8 @@
       "/Users/thadycondon/Documents/Projects/gitsnitch/app/models/user.rb": [
         1,
         null,
+        null,
+        1,
         null,
         1,
         null,
@@ -774,7 +777,16 @@
         null,
         null,
         1,
+        null,
         8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        null,
+        8,
+        null,
         null,
         null,
         null
@@ -807,7 +819,7 @@
         null,
         null,
         1,
-        20,
+        36,
         null,
         null,
         null
@@ -853,7 +865,7 @@
         null,
         null,
         1,
-        20,
+        36,
         null,
         null,
         1,
@@ -882,8 +894,6 @@
         1,
         null,
         null,
-        null,
-        null,
         1,
         1,
         1,
@@ -903,6 +913,20 @@
         null,
         null,
         null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/thadycondon/Documents/Projects/gitsnitch/spec/models/issue_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/thadycondon/Documents/Projects/gitsnitch/app/models/issue.rb": [
+        1,
         null,
         1,
         null,
@@ -1105,6 +1129,6 @@
         null
       ]
     },
-    "timestamp": 1474993997
+    "timestamp": 1475491209
   }
 }
