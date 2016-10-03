@@ -39,10 +39,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     issue.url = @client.results[0][:url].to_s
     issue.raw = @client.results[0][:raw].to_s
     issue.fragment = @client.results[0][:fragment].to_s
-    issue.user = User.first
+    issue.user = @user
     issue.save
-    # Issue.create(url: 'test', raw: 'test', fragment: 'test')
-    p "========================#{Issue.first.inspect}"
+    # p "========================#{Issue.find_by(user_id: @user.id).inspect}"
+    # p "========================#{Issue.first.inspect}"
     # session[:html] = @client.results
   end
 
