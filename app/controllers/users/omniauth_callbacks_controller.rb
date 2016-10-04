@@ -34,16 +34,12 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def github_results
-
     issue = Issue.new
     issue.url = @client.results[0][:url].to_s
     issue.raw = @client.results[0][:raw].to_s
     issue.fragment = @client.results[0][:fragment].to_s
     issue.user = @user
     issue.save
-    # p "========================#{Issue.find_by(user_id: @user.id).inspect}"
-    # p "========================#{Issue.first.inspect}"
-    # session[:html] = @client.results
   end
 
 end
